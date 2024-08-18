@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Attendance</title>
+</head>
+<body>
+    <h1>Attendance Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Registration Number</th>
+                <th>department</th>
+                <th>Timestamp</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for attendance in attendances %}
+            <tr>
+                <td>{{ attendance.student.id }}</td>
+                <td>{{ attendance.student.name }}</td>
+                <td>{{ attendance.student.regno }}</td>
+                <td>{{ attendance.student.department }}</td>
+                <td>{{ attendance.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                <td>{{ attendance.subject }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

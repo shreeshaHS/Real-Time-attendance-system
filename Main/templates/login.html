@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body  background="{{url_for('static',filename='upload/loginback.jpg')}}" >
+    
+<div class="wrapper">
+   
+    
+    <div class="form-wrapper sign-In">
+        <form action="{{ url_for('login_post') }}" method="POST">
+            <h2>LOGIN</h2>
+              
+            <!-- Flash message display -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flash-messages">
+                        {% for category, message in messages %}
+                            <li class="flash-{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <div class="input-group">
+                <input type="text" id="username" name='username'required>
+                <label for="username" >Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name='password'  id='password' required>
+                <label for="password">Password</label>
+            </div>
+            <div class="remember">
+            <label for=""><input type="checkbox">  Remember Me</label>
+        </div>
+        <button type="submit">LOGIN</button>
+        <div class="signup-link">
+            <p>Don't have account?<a href="/signup"class="signupBtn-link" name="sign-Up">sign Up</a></p>
+        </div>
+        
+        <div class="forgotPass-link">
+           <p> <a href="/forgotpass"class="forgotPassBtn-link" name="forgotpass">Forgot password </a></p>
+
+        </div>
+        </form>
+    
+</div>
+
+</div>
+
+</div>
+
+
+    
+</body>
+</html>

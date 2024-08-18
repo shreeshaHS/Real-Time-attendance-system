@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Face Recognition System</title>
+
+  <link rel="stylesheet" href="{{url_for('static',filename='style2.css')}}">
+</head>
+<body background="{{url_for('static',filename='upload/main.jpg')}}">
+  <div class="container">
+    <h1>Welcome to Face Recognition System</h1>
+  
+    <button  id="StudentButton" onclick="redirectToPage('/student')"style="background-image: url('{{ url_for('static', filename='upload/IMG_20240314_203617.jpg') }}'); left: 201px; top: 220px; width: 200px; height: 200px; border:solid black;  background-size: cover;"></button>
+    
+    <button id="detectButton" onclick="redirectToPage('/detect')" style="background-image: url('{{ url_for('static', filename='upload/images.jpeg') }}'); left: 501px; top: 220px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+   
+  <button id="AttendanceButton"onclick="redirectToPage(' /attendance')"style="background-image: url('{{ url_for('static', filename='upload/IMG_20240314_203707_1.jpg') }}'); left: 801px; top: 220px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+ 
+  <button id="helpButton"onclick="redirectToPage(' /chatbot')"style="background-image: url('{{ url_for('static', filename='upload/IMG_20240314_203512_2.jpg') }}'); left:1101px; top: 220px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+
+  <button  id="TrainButton" onclick="redirectToPage('/train')" style="background-image: url('{{ url_for('static', filename='upload/train_image.jpeg') }}'); left: 201px; top: 500px; width: 200px; height: 200px; border: solid black;  background-size: cover;" ></button>
+    
+  <button id="PhotoButton"onclick="redirectToPage('/openfloder')"style="background-image: url('{{ url_for('static', filename='upload/IMG_20240314_203633.jpg') }}'); left: 501px; top: 500px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+ 
+  <button id="DevelporButton"onclick="redirectToPage(' /developer_info')"style="background-image: url('{{ url_for('static', filename='upload/IMG_20240314_203456.jpg') }}'); left: 801px; top: 500px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+ 
+  <button id="ExitButton"onclick="redirectToPage('/exit')"style="background-image: url('{{ url_for('static', filename='upload/ec409a440ede705982c7088e3a177273.jpg') }}'); left: 1101px; top: 500px; width: 200px; height: 200px; border: solid black;  background-size: cover;"></button>
+
+
+   
+  </div>
+
+  <script>
+    function redirectToPage(pageUrl) {
+      window.location.href = pageUrl;
+    }
+   
+  </script>
+
+
+</body>
+</html>

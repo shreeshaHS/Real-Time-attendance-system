@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgot pass</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body background="{{url_for('static',filename='upload/forgot.jpg')}}" >
+    <div class="wrapper">
+        <div class="form-wrapper forgot-pass">
+            <form action="/forgotpass" method="POST">
+                <h2>forgotpass</h2>
+                
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label for="">Email</label>
+                </div>
+        
+        
+                <div class="input-group">
+                    <input type="password" name="new_password" required>
+                    <label for="">New Password</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="confirm_password" required>
+                    <label for="">Confirm password</label>
+                </div>
+               
+            <button type="submit">submit</button>
+            
+            <div class="forgotPass-link">
+                <a href="/"class="signInBtn-link">Sign In</a>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>     
+</body>
+</html>
