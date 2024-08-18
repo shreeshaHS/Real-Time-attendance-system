@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.left-panel, .right-panel {
+    width: calc(50% - 20px);
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label {
+    font-weight: bold;
+}
+.form-group input, .form-group select {
+    width: 200px;
+    padding: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.form-group button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+}
+.table-container {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+#back-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content:right;
+    float: right;
+}

@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+@keyframes moveBorderColor {
+    0% { border-color: rgb(40, 167, 69); } /* Start color (green) */
+    50% { border-color: rgb(0, 123, 255); } /* Middle color (blue) */
+    100% { border-color: rgb(40, 167, 69); } /* End color (green) */
+}
+
+.chat-container {
+    width: 400px;
+    border: 2px solid rgb(40, 167, 69); /* Initial border color (green) */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.5); /* Added glow effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out, moveBorderColor 5s infinite alternate; /* Added border color movement animation */
+}
+
+
+
+.chat-box {
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    color:black; /* Added color for message text */
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    outline: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes glow {
+    0% { color: plum; }
+    50% { color:aqua; }
+    100% { color: blue; }
+}
+
+.input-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.5); /* Added glow effect */
+    transition: background-color 0.3s ease;
+    animation: glow 2s infinite; /* Added pulsating color animation */
+}
+
+
+.input-container button:hover {
+    background-color: #218838;
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333; /* Added color for message text */
+}
+
+.user-message {
+    align-self: flex-start;
+}
+
+.bot-message {
+    align-self: flex-end;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height:100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+    
+
+
+.wrapper{
+    position: relative;
+    width:350px;
+    height: 500px;
+    background:transparent ;
+    border-radius:20px;
+    padding: 40px;
+    border: solid black;
+    filter:blur(2);
+    
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+   
+   
+    animation: fadeIn 1s ease, slideIn 1s ease;
+}
+@keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .flash-messages {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .flash-messages li {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .flash-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .flash-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+.input-group{
+    position: relative;
+    margin: 30px 0;
+    border-bottom:2px solid black;
+}
+
+
+
+.input-group label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+    transition:.5s;
+    /*transition: top 0.3s ease, font-size 0.3s ease;*/
+}
+.input-group input{
+    width: 300px;
+    height:40px;
+    font-size: 16px;
+    color:black;
+    padding:0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.input-group input:focus~label,
+.input-group input:valid~label{
+    top: -5px;
+
+}
+.remember{
+    margin: -5px 0 15px 5px;
+}
+
+.remember label{
+    color: black;
+    font-size: 14px;
+
+}
+.remember label input{
+    accent-color:black;
+}
+
+button{
+    position: relatives;
+    width: 100%;
+    height:40px;
+    background: #0ef;
+    box-shadow: 0 0 10px black;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+.forgotPass{
+    font-size: 14px;
+    
+    margin: 15px 0;
+}
+.signup-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signup-link p a{
+
+color:blue;
+text-decoration: none;
+font-weight: 500;
+}
+.forgotPass-link{
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+    .forgotPass-link p a{
+        color:blue;
+        text-decoration: none;
+font-weight: 500;
+
+    
+    }
+    .forgotPass-link p a:hover{
+        text-decoration: underline;
+        color: purple;
+
+        }
+
+   
+    
+    
+.signup-link p a:hover{
+    text-decoration: underline;
+
+}
+
+input:focus + label,
+input:valid + label {
+    top: 0;
+    font-size: 14px;
+}
+.signup-link a,
+.forgotPass-link a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.signup-link a:hover,
+.forgotPass-link a:hover {
+    color: #333;
+}
+.signup-link,
+.forgotPass-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
